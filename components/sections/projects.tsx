@@ -7,12 +7,8 @@ export function Projects() {
     <section id="projects" className="relative py-28 sm:py-36">
       <div className="mx-auto max-w-6xl px-6">
         <Eyebrow className="mb-6">Selected Work</Eyebrow>
-        <Display className="max-w-3xl">
-          Projects I&apos;m <span className="text-gradient">proud of</span>.
-        </Display>
-        <Lead className="mt-6">
-          AI, backend, MERN, and real-time collaboration work pulled from my resume.
-        </Lead>
+        <Display className="max-w-3xl">Featured Projects</Display>
+
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {projects.map((p) => (
             <ExpandingCard key={p.title} {...p} />

@@ -42,11 +42,11 @@ export function SpaceBackground({ starCount = 56 }: { starCount?: number }) {
       <div className="absolute inset-0 bg-background" />
 
       <motion.div
-        className="absolute inset-0 opacity-35"
+        className="absolute inset-0 opacity-20"
         style={{
           backgroundImage:
-            "linear-gradient(to right, oklch(0.97 0.005 250 / 0.06) 1px, transparent 1px), linear-gradient(to bottom, oklch(0.97 0.005 250 / 0.06) 1px, transparent 1px)",
-          backgroundSize: "62px 62px",
+            "linear-gradient(to right, oklch(0.97 0.005 250 / 0.04) 1px, transparent 1px), linear-gradient(to bottom, oklch(0.97 0.005 250 / 0.04) 1px, transparent 1px)",
+          backgroundSize: "68px 68px",
           maskImage: "radial-gradient(ellipse at 50% 35%, black 32%, transparent 85%)",
           willChange: "background-position",
           transform: "translateZ(0)",
@@ -55,19 +55,19 @@ export function SpaceBackground({ starCount = 56 }: { starCount?: number }) {
           reduceMotion
             ? undefined
             : {
-                backgroundPositionX: ["0px", "62px"],
-                backgroundPositionY: ["0px", "62px"],
+                backgroundPositionX: ["0px", "68px"],
+                backgroundPositionY: ["0px", "68px"],
               }
         }
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 42, repeat: Infinity, ease: "linear" }}
       />
 
       <div
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0 opacity-24"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 20% 20%, oklch(0.78 0.16 220 / 0.2), transparent 45%), radial-gradient(circle at 80% 70%, oklch(0.7 0.2 310 / 0.18), transparent 46%), radial-gradient(circle at 50% 85%, oklch(0.82 0.08 255 / 0.12), transparent 40%)",
-          filter: "blur(4px)",
+            "radial-gradient(circle at 22% 20%, oklch(0.78 0.16 220 / 0.16), transparent 46%), radial-gradient(circle at 78% 68%, oklch(0.7 0.2 310 / 0.14), transparent 48%), radial-gradient(circle at 50% 84%, oklch(0.82 0.08 255 / 0.1), transparent 42%)",
+          filter: "blur(8px)",
         }}
       />
 
@@ -93,7 +93,7 @@ export function SpaceBackground({ starCount = 56 }: { starCount?: number }) {
       ))}
 
       <div
-        className="absolute inset-0 opacity-[0.06]"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage:
             "repeating-radial-gradient(circle at 0 0, rgba(255,255,255,0.3) 0px, rgba(255,255,255,0.3) 1px, transparent 1px, transparent 3px)",

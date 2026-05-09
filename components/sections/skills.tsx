@@ -8,20 +8,24 @@ export function Skills() {
       <div className="mx-auto max-w-6xl px-6">
         <Eyebrow className="mb-6">Toolbox</Eyebrow>
         <Display className="max-w-3xl">
-          Tools I reach for, <span className="text-gradient">daily</span>.
+          <span className="text-gradient">Tools</span> I reach for,
         </Display>
         <Lead className="mt-6">
-          Languages, frameworks, databases, cloud tools, and security primitives from my resume.
+          Languages, frameworks, databases, cloud tools, and security primitives
+          I use.
         </Lead>
         <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
           {skills.map((s, i) => {
-            const Comp = i % 3 === 0 ? BoxyShift : i % 3 === 1 ? BoxyBounce : BoxyRotate;
+            const Comp =
+              i % 3 === 0 ? BoxyShift : i % 3 === 1 ? BoxyBounce : BoxyRotate;
             return (
               <Comp key={s.name} className="aspect-square">
                 <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-primary text-base font-bold text-primary-foreground shadow-glow">
                   {s.icon}
                 </div>
-                <div className="mt-3 text-sm font-medium text-foreground">{s.name}</div>
+                <div className="mt-3 text-sm font-medium text-foreground">
+                  {s.name}
+                </div>
               </Comp>
             );
           })}

@@ -5,7 +5,11 @@ import { Send, Mail, MapPin, Check } from "lucide-react";
 import { Display, Eyebrow, Lead } from "@/components/ui-fx/text-system";
 import { Glowy } from "@/components/ui-fx/glowy";
 import { PrimaryButton } from "@/components/ui-fx/primary-button";
-import { GithubIcon, LinkedinIcon, SocialButton } from "@/components/ui-fx/social-icons";
+import {
+  GithubIcon,
+  LinkedinIcon,
+  SocialButton,
+} from "@/components/ui-fx/social-icons";
 import { profile } from "@/data/portfolio";
 
 function Field({
@@ -58,11 +62,12 @@ export function Contact() {
       <div className="mx-auto max-w-6xl px-6">
         <Eyebrow className="mb-6">Contact</Eyebrow>
         <Display className="max-w-3xl">
-          Need a backend or AI app <span className="text-gradient">built well</span>?
+          Need a backend or AI app{" "}
+          <span className="text-gradient">built well</span>?
         </Display>
         <Lead className="mt-6">
-          Open to backend, full-stack, cloud, and AI application opportunities. Reach out for
-          collaborations, internships, or project work.
+          Open to backend, full-stack, cloud, and AI application opportunities.
+          Reach out for collaborations, internships, or project work.
         </Lead>
         <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_1.2fr]">
           <Glowy inner="p-8">
@@ -79,8 +84,12 @@ export function Contact() {
                   <Mail className="h-4 w-4 text-primary-foreground" />
                 </span>
                 <span>
-                  <span className="block text-xs text-muted-foreground">Email</span>
-                  <span className="block text-sm font-medium text-foreground">{profile.email}</span>
+                  <span className="block text-xs text-muted-foreground">
+                    Email
+                  </span>
+                  <span className="block text-sm font-medium text-foreground">
+                    {profile.email}
+                  </span>
                 </span>
               </a>
               <div className="flex items-center gap-3 rounded-2xl border border-border bg-secondary/40 p-4">
@@ -88,7 +97,9 @@ export function Contact() {
                   <MapPin className="h-4 w-4 text-primary-foreground" />
                 </span>
                 <span>
-                  <span className="block text-xs text-muted-foreground">Location</span>
+                  <span className="block text-xs text-muted-foreground">
+                    Location
+                  </span>
                   <span className="block text-sm font-medium text-foreground">
                     {profile.location}
                   </span>
@@ -118,7 +129,13 @@ export function Contact() {
                 </p>
                 <PrimaryButton
                   type="submit"
-                  icon={sent ? <Check className="h-4 w-4" /> : <Send className="h-4 w-4" />}
+                  icon={
+                    sent ? (
+                      <Check className="h-4 w-4" />
+                    ) : (
+                      <Send className="h-4 w-4" />
+                    )
+                  }
                 >
                   {sent ? "Sent!" : "Send message"}
                 </PrimaryButton>

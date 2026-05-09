@@ -3,10 +3,11 @@ const p1 = "/assets/proj-1.jpg";
 const p2 = "/assets/proj-2.jpg";
 const p3 = "/assets/proj-3.jpg";
 const p4 = "/assets/proj-4.jpg";
+const p5 = "/assets/proj-5.jpg";
 
 export const profile = {
   name: "Wahid Shaikh",
-  role: "Backend-focused Full Stack Developer",
+  role: "Full Stack Developer",
   location: "Mumbai, India",
   email: "wahid.shaikh4422@gmail.com",
   phone: "+91-8169120436",
@@ -28,7 +29,7 @@ export const skills = [
   { name: "React.js", icon: "RE" },
   { name: "MongoDB", icon: "MO" },
   { name: "PostgreSQL", icon: "PG" },
-  { name: "Neo4j", icon: "N4" },
+  { name: "Next.js", icon: "Nxt" },
   { name: "Docker", icon: "DK" },
   { name: "AWS", icon: "AWS" },
 ];
@@ -70,13 +71,22 @@ export const stack = [
 
 export const projects = [
   {
+    title: "E-Commerce Platform",
+    image: p3,
+    description:
+      "Responsive MERN e-commerce app with admin product management, MongoDB Atlas data modeling through Mongoose v7, session login with Passport.js, Passport JWT protected routes, and Vercel deployment.",
+    tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Passport.js"],
+    live: "https://e-commerce-henna-nine-35.vercel.app/",
+    github: "https://github.com/ShaikhWahid99/E-Commerce-MERN",
+  },
+  {
     title: "Personalized Learning Path Generator",
     image: p1,
     description:
       "Full-stack adaptive learning platform built for SIH Finals with role-based dashboards, JWT, Google OAuth 2.0, bcrypt, Neo4j recommendations, LangChain-powered quiz generation, and ReactFlow learning roadmaps.",
     tech: ["React 18", "TypeScript", "Node.js", "MongoDB", "Neo4j"],
     live: "#",
-    github: "#",
+    github: "https://github.com/ShaikhWahid99/SIH_Finals_2025",
   },
   {
     title: "Multimodal RAG",
@@ -85,16 +95,7 @@ export const projects = [
       "FastAPI, React, and PostgreSQL platform for intelligent Q&A over PDFs with text, tables, and images. Includes PyMuPDF/OCR ingestion, ChromaDB retrieval, MiniLM embeddings, Gemini 2.5, and multi-tenant JWT auth.",
     tech: ["FastAPI", "React", "PostgreSQL", "ChromaDB", "Gemini"],
     live: "#",
-    github: "#",
-  },
-  {
-    title: "E-Commerce Platform",
-    image: p3,
-    description:
-      "Responsive MERN e-commerce app with admin product management, MongoDB Atlas data modeling through Mongoose v7, session login with Passport.js, Passport JWT protected routes, and Vercel deployment.",
-    tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Passport.js"],
-    live: "#",
-    github: "#",
+    github: "https://github.com/ShaikhWahid99/Multimodal-RAG",
   },
   {
     title: "Video Conferencing Web App",
@@ -103,35 +104,51 @@ export const projects = [
       "WebRTC peer-to-peer video calling platform with Socket.IO signaling, session coordination, STUN server configuration for NAT traversal, and a real-time collaborative whiteboard.",
     tech: ["WebRTC", "Socket.IO", "Node.js", "React.js"],
     live: "#",
-    github: "#",
+    github: "https://github.com/ShaikhWahid99/Video-Conferencing-Website",
+  },
+  {
+    title: "Social Media Platform",
+    image: p5,
+    description:
+      "MERN-based social media platform with JWT/bcrypt authentication, Dockerized backend, and scalable MongoDB architecture. Includes RESTful Express.js APIs for posts, likes, comments, and follow/unfollow features with full production deployment.",
+    tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Docker", "JWT"],
+    live: "https://linkup-jx24.onrender.com/",
+    github: "https://github.com/ShaikhWahid99/Social-Media-Platform",
   },
 ];
 
 export const experience = [
   {
-    company: "SIH Finals",
-    role: "Developer - Personalized Learning Path Generator",
+    company: "",
+    role: "SIH Finals - Personalized Learning Path Generator",
     period: "Nov 2025 - Dec 2025",
     description:
-      "Built a full-stack adaptive learning platform with React, TypeScript, Node.js, MongoDB, and Neo4j. Designed graph-based recommendations with Cypher and cosine similarity, integrated external LLM APIs, and delivered interactive ReactFlow roadmaps with resilient authenticated API layers.",
+      "Built a full-stack adaptive learning platform with React, TypeScript, Node.js, MongoDB, and Neo4j. Designed graph-based recommendations with Cypher and cosine similarity, integrated external LLM (Hugging Face, LangChain), and delivered interactive ReactFlow roadmaps with resilient authenticated API layers.",
   },
   {
-    company: "Multimodal RAG",
-    role: "Team Lead",
+    company: "",
+    role: "Project Exhibition 1st Runner Up",
+    period: "Aug 2026",
+    description:
+      "Led the team in researching, planning, and presenting Sentinel AI, an autonomous security audit platform for DeFi and web infrastructure. Contributed to system design discussions, vulnerability analysis research, feature planning, and overall project coordination, helping the team secure 1st Runner-Up at the project exhibition.",
+  },
+  {
+    company: "",
+    role: "Team Lead - Multimodal RAG",
     period: "Sep 2025 - Apr 2026",
     description:
       "Architected a document intelligence platform using FastAPI, React, and PostgreSQL. Built OCR-based ingestion with PyMuPDF and PyTesseract, hybrid ChromaDB retrieval with MiniLM embeddings, figure extraction, Gemini 2.5 integration, and secure multi-tenant JWT architecture.",
   },
   {
-    company: "Mumbai University",
-    role: "B.E. Information Technology",
+    company: "",
+    role: "B.E. Information Technology - Mumbai University",
     period: "Aug 2022 - Present",
     description:
       "Pursuing Bachelor of Engineering in Information Technology with a 7.94 CGPI while building production-style full-stack, backend, cloud, and AI projects.",
   },
   {
-    company: "Certifications",
-    role: "AWS, Oracle, React, Drupal",
+    company: "",
+    role: "AWS, Oracle, React, Drupal - Certifications",
     period: "Ongoing",
     description:
       "AWS Academy Machine Learning Foundations, AWS Academy Cloud Web Application Builder, Oracle Cloud Infrastructure Foundations II, React Bootcamp, and Drupal Training Course from SINE IIT Bombay.",

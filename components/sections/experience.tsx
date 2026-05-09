@@ -49,10 +49,12 @@ export function Experience() {
       <div className="mx-auto max-w-5xl px-6">
         <Eyebrow className="mb-6">Journey</Eyebrow>
         <Display className="max-w-3xl">
-          Projects, leadership, and <span className="text-gradient">learning</span>.
+          Projects, leadership, and{" "}
+          <span className="text-gradient">learning</span>.
         </Display>
         <Lead className="mt-6">
-          A timeline of applied backend, AI, cloud, and academic work from my resume.
+          A timeline of applied backend, AI, cloud, and academic work from my
+          resume.
         </Lead>
         <div ref={containerRef} className="relative mt-16 pl-8 sm:pl-16">
           <div className="absolute left-3 top-2 bottom-2 w-px bg-border sm:left-7" />
@@ -66,7 +68,8 @@ export function Experience() {
                 <div className="rounded-3xl border border-border bg-card/60 p-6 backdrop-blur-xl">
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
                     <h3 className="text-lg font-semibold text-foreground">
-                      {e.role} <span className="text-muted-foreground">at</span>{" "}
+                      {e.role}{" "}
+                      {/* <span className="text-muted-foreground">at</span>{" "}*/}
                       <span className="text-gradient">{e.company}</span>
                     </h3>
                     <span className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
