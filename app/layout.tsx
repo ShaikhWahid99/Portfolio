@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpaceBackground } from "@/components/backgrounds/SpaceBackground";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,7 +20,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="relative min-h-screen overflow-x-hidden">
+        <SpaceBackground />
+        <div className="relative z-10">{children}</div>
+      </body>
     </html>
   );
 }

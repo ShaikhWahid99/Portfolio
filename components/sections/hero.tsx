@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin } from "lucide-react";
-import { Starfield } from "@/components/ui-fx/starfield";
 import { PrimaryButton } from "@/components/ui-fx/primary-button";
 import { StaggerText } from "@/components/ui-fx/text-system";
 import { GithubIcon, LinkedinIcon, SocialButton } from "@/components/ui-fx/social-icons";
@@ -9,11 +8,7 @@ import { profile } from "@/data/portfolio";
 
 export function Hero() {
   return (
-    <section
-      id="top"
-      className="relative isolate flex min-h-[100svh] items-center overflow-hidden pt-28"
-    >
-      <Starfield />
+    <section id="top" className="relative flex min-h-[100svh] items-center pt-28">
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6">
         <motion.div

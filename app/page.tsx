@@ -12,7 +12,7 @@ import { Footer } from "@/components/sections/footer";
 
 export default function Home() {
   return (
-    <main className="relative bg-background text-foreground">
+    <main className="relative text-foreground">
       <Menu />
       <Hero />
       <About />
