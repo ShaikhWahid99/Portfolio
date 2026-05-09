@@ -1,7 +1,9 @@
 "use client";
-import { useState, type FormEvent } from "react";
+
+import { useActionState, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Mail, MapPin, Check } from "lucide-react";
+import { Check, Loader2, Mail, MapPin, Send } from "lucide-react";
+import { submitContactForm } from "@/app/actions/contact";
 import { Display, Eyebrow, Lead } from "@/components/ui-fx/text-system";
 import { Glowy } from "@/components/ui-fx/glowy";
 import { PrimaryButton } from "@/components/ui-fx/primary-button";
@@ -11,18 +13,24 @@ import {
   SocialButton,
 } from "@/components/ui-fx/social-icons";
 import { profile } from "@/data/portfolio";
+import type { ContactField } from "@/lib/contact/types";
+import { initialContactActionState } from "@/lib/contact/types";
+import { MIN_MESSAGE_LENGTH } from "@/lib/contact/validate";
 
 function Field({
   label,
   name,
   type = "text",
   as = "input",
+  error,
 }: {
   label: string;
   name: string;
   type?: string;
   as?: "input" | "textarea";
+  error?: string;
 }) {
+  const invalid = Boolean(error);
   return (
     <label className="group relative block">
       <span className="mb-2 block text-xs uppercase tracking-[0.18em] text-muted-foreground">
@@ -32,7 +40,10 @@ function Field({
         <textarea
           name={name}
           required
+          minLength={MIN_MESSAGE_LENGTH}
           rows={5}
+          aria-invalid={invalid}
+          aria-describedby={invalid ? `${name}-error` : undefined}
           className="w-full resize-none rounded-2xl border border-border bg-secondary/40 px-4 py-3 text-foreground placeholder:text-muted-foreground/60 outline-none transition-all focus:border-primary/60 focus:bg-secondary focus:shadow-glow"
           placeholder="Tell me about your project..."
         />
@@ -41,21 +52,41 @@ function Field({
           type={type}
           name={name}
           required
+          aria-invalid={invalid}
+          aria-describedby={invalid ? `${name}-error` : undefined}
           className="w-full rounded-2xl border border-border bg-secondary/40 px-4 py-3 text-foreground placeholder:text-muted-foreground/60 outline-none transition-all focus:border-primary/60 focus:bg-secondary focus:shadow-glow"
           placeholder=" "
         />
       )}
+      {error ? (
+        <span id={`${name}-error`} className="mt-1.5 block text-xs text-destructive">
+          {error}
+        </span>
+      ) : null}
     </label>
   );
 }
 
 export function Contact() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [state, formAction, isPending] = useActionState(
+    submitContactForm,
+    initialContactActionState,
+  );
   const [sent, setSent] = useState(false);
-  const onSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
-  };
+
+  useEffect(() => {
+    if (state.ok) {
+      formRef.current?.reset();
+      setSent(true);
+      const timer = window.setTimeout(() => setSent(false), 4000);
+      return () => window.clearTimeout(timer);
+    }
+    setSent(false);
+    return undefined;
+  }, [state]);
+
+  const fieldError = (field: ContactField) => state.fieldErrors[field];
 
   return (
     <section id="contact" className="relative py-28 sm:py-36">
@@ -116,28 +147,62 @@ export function Contact() {
             </div>
           </Glowy>
           <Glowy inner="p-8">
-            <form onSubmit={onSubmit} className="space-y-5">
-              <div className="grid gap-5 sm:grid-cols-2">
-                <Field label="Name" name="name" />
-                <Field label="Email" name="email" type="email" />
+            <form ref={formRef} action={formAction} className="relative space-y-5">
+              <div
+                className="pointer-events-none absolute left-[-9999px] h-0 w-0 overflow-hidden opacity-0"
+                aria-hidden="true"
+              >
+                <label htmlFor="contact-company">
+                  Company
+                  <input
+                    id="contact-company"
+                    type="text"
+                    name="company"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </label>
               </div>
-              <Field label="Subject" name="subject" />
-              <Field label="Message" name="message" as="textarea" />
+              <div className="grid gap-5 sm:grid-cols-2">
+                <Field label="Name" name="name" error={fieldError("name")} />
+                <Field
+                  label="Email"
+                  name="email"
+                  type="email"
+                  error={fieldError("email")}
+                />
+              </div>
+              <Field label="Subject" name="subject" error={fieldError("subject")} />
+              <Field
+                label="Message"
+                name="message"
+                as="textarea"
+                error={fieldError("message")}
+              />
+              {state.error ? (
+                <p className="text-sm text-destructive" role="alert">
+                  {state.error}
+                </p>
+              ) : null}
               <div className="flex items-center justify-between gap-4 pt-2">
                 <p className="text-xs text-muted-foreground">
                   By sending you agree to be contacted by email.
                 </p>
                 <PrimaryButton
                   type="submit"
+                  disabled={isPending}
+                  className="disabled:pointer-events-none disabled:opacity-55"
                   icon={
-                    sent ? (
-                      <Check className="h-4 w-4" />
-                    ) : (
-                      <Send className="h-4 w-4" />
-                    )
-                  }
+                  isPending ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : sent ? (
+                    <Check className="h-4 w-4" />
+                  ) : (
+                    <Send className="h-4 w-4" />
+                  )
+                }
                 >
-                  {sent ? "Sent!" : "Send message"}
+                  {isPending ? "Sending…" : sent ? "Sent!" : "Send message"}
                 </PrimaryButton>
               </div>
               {sent && (

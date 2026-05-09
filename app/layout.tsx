@@ -3,12 +3,12 @@ import { SpaceBackground } from "@/components/backgrounds/SpaceBackground";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Wahid Shaikh | Developer",
   description:
     "Backend-focused full stack developer portfolio for Wahid Shaikh, featuring MERN, FastAPI, RAG, cloud, and secure API projects.",
   authors: [{ name: "Wahid Shaikh" }],
   openGraph: {
-    title: "Wahid Shaikh | Backend-focused Full Stack Developer",
+    title: "Wahid Shaikh | Full Stack Developer",
     description: "Backend, AI, cloud, and full-stack projects by Wahid Shaikh.",
     type: "website",
   },
