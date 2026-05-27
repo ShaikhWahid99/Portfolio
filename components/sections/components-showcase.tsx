@@ -5,6 +5,8 @@ import { Basic } from "@/components/ui-fx/basic-card";
 import { stack } from "@/data/portfolio";
 import { Bot, Braces, Database, GitBranch, Lock, Server } from "lucide-react";
 
+const INVERT_ICONS = new Set(["Express.js", "GitHub", "Vercel", "Socket.IO"]);
+
 const blocks = [
   {
     icon: Server,
@@ -38,6 +40,26 @@ const blocks = [
   },
 ];
 
+function StackPill({ s, accent }: { s: { name: string; icon: string }; accent: "primary" | "accent" }) {
+  return (
+    <Basic className="flex items-center gap-2 whitespace-nowrap px-5 py-3 text-sm font-medium text-muted-foreground">
+      {s.icon ? (
+        <img
+          src={s.icon}
+          alt={s.name}
+          width={16}
+          height={16}
+          className="shrink-0"
+          // style={INVERT_ICONS.has(s.name) ? { filter: "invert(1)" } : undefined}
+        />
+      ) : (
+        <span className={`h-1.5 w-1.5 rounded-full bg-${accent}`} />
+      )}
+      {s.name}
+    </Basic>
+  );
+}
+
 export function ComponentsShowcase() {
   return (
     <section id="components" className="relative py-28 sm:py-36">
@@ -64,24 +86,12 @@ export function ComponentsShowcase() {
       <div className="mt-16 space-y-6">
         <InfiniteSlider speed={40}>
           {stack.map((s) => (
-            <Basic
-              key={s}
-              className="flex items-center gap-2 whitespace-nowrap px-5 py-3 text-sm font-medium text-muted-foreground"
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              {s}
-            </Basic>
+            <StackPill key={s.name} s={s} accent="primary" />
           ))}
         </InfiniteSlider>
         <InfiniteSlider speed={50} reverse>
           {[...stack].reverse().map((s) => (
-            <Basic
-              key={s + "r"}
-              className="flex items-center gap-2 whitespace-nowrap px-5 py-3 text-sm font-medium text-muted-foreground"
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              {s}
-            </Basic>
+            <StackPill key={s.name + "r"} s={s} accent="accent" />
           ))}
         </InfiniteSlider>
       </div>

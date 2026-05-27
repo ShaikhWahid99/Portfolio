@@ -20,8 +20,8 @@ export function Skills() {
               i % 3 === 0 ? BoxyShift : i % 3 === 1 ? BoxyBounce : BoxyRotate;
             return (
               <Comp key={s.name} className="aspect-square">
-                <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-primary text-base font-bold text-primary-foreground shadow-glow">
-                  {s.icon}
+                <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-primary shadow-glow">
+                  <img src={s.icon} alt={s.name} width={30} height={30} />
                 </div>
                 <div className="mt-3 text-sm font-medium text-foreground">
                   {s.name}

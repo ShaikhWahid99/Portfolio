@@ -28,7 +28,7 @@ export function ExpandingCard({ image, title, description, tech, github, live, c
         className,
       )}
     >
-      <div className="relative aspect-[16/10] overflow-hidden">
+      <div className={cn("relative aspect-[16/10] overflow-hidden", live && "cursor-pointer")}>
         <motion.img
           src={image}
           alt={title}
@@ -40,11 +40,26 @@ export function ExpandingCard({ image, title, description, tech, github, live, c
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+        {live && (
+          <a
+            href={live}
+            target="_blank"
+            rel="noreferrer"
+            className="absolute inset-0 z-10"
+            aria-label={`View ${title} live project`}
+          />
+        )}
       </div>
       <div className="relative p-6">
         <div className="flex items-start justify-between gap-3">
           <h3 className="text-xl font-semibold text-foreground">{title}</h3>
-          <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-all group-hover:text-primary group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          {live ? (
+            <a href={live} target="_blank" rel="noreferrer" className="z-20">
+              <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-all group-hover:text-primary group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </a>
+          ) : (
+            <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-all group-hover:text-primary group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          )}
         </div>
         <AnimatePresence initial={false}>
           {open && (

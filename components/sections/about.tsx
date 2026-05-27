@@ -48,13 +48,19 @@ export function About() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.9 }}
-          className="mx-auto max-w-4xl text-balance text-display text-4xl leading-[0.97] text-foreground/95 sm:text-5xl md:text-[60px]"
+          className="mx-auto flex flex-col leading-none"
         >
-          MERN Stack Developer.
-          <br />
-          <span className="text-foreground/85">Engineering modern</span>
-          <br />
-          <span className="text-gradient">backend systems.</span>
+          <span className="text-4xl font-bold text-foreground/95 sm:text-5xl md:text-[72px]">
+            Full Stack Developer.
+          </span>
+
+          <span className="mt-1 ml-2 text-3xl font-bold text-foreground/85 sm:text-4xl md:text-[56px]">
+            Engineering modern
+          </span>
+
+          <span className="mt-1 ml-6 text-2xl font-bold text-gradient sm:text-3xl md:text-[44px]">
+            backend systems.
+          </span>
         </motion.h1>
 
         <motion.div
