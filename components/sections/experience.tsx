@@ -53,8 +53,8 @@ export function Experience() {
           <span className="text-gradient">learning</span>.
         </Display>
         <Lead className="mt-6">
-          A timeline of applied backend, AI, cloud, and academic work from my
-          resume.
+          A timeline of applied full-stack, AI, cloud, and academic work from
+          my resume.
         </Lead>
         <div ref={containerRef} className="relative mt-16 pl-8 sm:pl-16">
           <div className="absolute left-3 top-2 bottom-2 w-px bg-border sm:left-7" />

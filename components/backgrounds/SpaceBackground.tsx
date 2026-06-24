@@ -45,7 +45,7 @@ export function SpaceBackground({ starCount = 56 }: { starCount?: number }) {
         className="absolute inset-0 opacity-20"
         style={{
           backgroundImage:
-            "linear-gradient(to right, oklch(0.97 0.005 250 / 0.04) 1px, transparent 1px), linear-gradient(to bottom, oklch(0.97 0.005 250 / 0.04) 1px, transparent 1px)",
+            "linear-gradient(to right, oklch(1 0 0 / 0.04) 1px, transparent 1px), linear-gradient(to bottom, oklch(1 0 0 / 0.04) 1px, transparent 1px)",
           backgroundSize: "68px 68px",
           maskImage: "radial-gradient(ellipse at 50% 35%, black 32%, transparent 85%)",
           willChange: "background-position",
@@ -66,7 +66,7 @@ export function SpaceBackground({ starCount = 56 }: { starCount?: number }) {
         className="absolute inset-0 opacity-24"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 22% 20%, oklch(0.78 0.16 220 / 0.16), transparent 46%), radial-gradient(circle at 78% 68%, oklch(0.7 0.2 310 / 0.14), transparent 48%), radial-gradient(circle at 50% 84%, oklch(0.82 0.08 255 / 0.1), transparent 42%)",
+            "radial-gradient(circle at 22% 20%, oklch(1 0 0 / 0.08), transparent 46%), radial-gradient(circle at 78% 68%, oklch(0.8 0 0 / 0.06), transparent 48%), radial-gradient(circle at 50% 84%, oklch(0.9 0 0 / 0.05), transparent 42%)",
           filter: "blur(8px)",
         }}
       />

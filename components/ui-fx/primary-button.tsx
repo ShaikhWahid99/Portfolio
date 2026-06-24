@@ -30,7 +30,7 @@ export const PrimaryButton = forwardRef<HTMLButtonElement, PrimaryButtonProps>(
       <button
         ref={ref}
         className={cn(
-          "group relative inline-flex items-center gap-2 overflow-hidden rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-all hover:shadow-glow-violet active:scale-[0.98]",
+          "group relative inline-flex items-center gap-2 overflow-hidden rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-all hover:scale-[1.02] active:scale-[0.98]",
           className,
         )}
         {...props}

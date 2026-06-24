@@ -17,22 +17,22 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="mb-6 inline-flex items-center gap-2 rounded-full border border-border glass px-3 py-1 text-xs uppercase tracking-[0.18em] text-muted-foreground"
         >
-          Backend-focused full stack developer
+          Full Stack Web Developer
         </motion.div>
 
         <h1 className="text-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
           <span className="block text-foreground/90">
-            <StaggerText text="Building scalable" />
+            <StaggerText text="Building seamless" />
           </span>
           <span className="block">
             <StaggerText
-              text="APIs, AI apps, and"
+              text="products, AI apps, and"
               delay={0.15}
               wordClassName="text-foreground/90"
             />
           </span>
           <span className="block">
-            <StaggerText text="secure systems." delay={0.35} wordClassName="text-gradient" />
+            <StaggerText text="dynamic systems." delay={0.35} wordClassName="text-gradient" />
           </span>
         </h1>
 
@@ -44,8 +44,8 @@ export function Hero() {
         >
           <p>
             Hi, I&apos;m <span className="text-foreground font-medium">{profile.name}</span>, an IT
-            undergraduate from Mumbai building scalable REST APIs, secure microservices, and
-            AI-driven full-stack applications.
+            undergraduate from Mumbai building high-performance web applications, 
+            intelligent AI solutions, and complete full-stack products.
           </p>
         </motion.div>
 

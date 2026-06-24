@@ -59,7 +59,7 @@ export function About() {
           </span>
 
           <span className="mt-1 ml-6 text-2xl font-bold text-gradient sm:text-3xl md:text-[44px]">
-            backend systems.
+            web products.
           </span>
         </motion.h1>
 
@@ -94,7 +94,7 @@ export function About() {
               alt={profile.name}
               width={50}
               height={50}
-              className="relative h-12 w-12 transform-gpu rounded-full border border-border object-cover shadow-[0_0_12px_-10px_rgba(120,190,255,0.55)]"
+              className="relative h-12 w-12 transform-gpu rounded-full border border-border object-cover shadow-[0_0_12px_-10px_rgba(255,255,255,0.35)]"
               loading="eager"
               whileHover={{ scale: 1.08 }}
               transition={{ duration: 0.22, ease: "easeOut" }}
@@ -156,7 +156,7 @@ export function About() {
                   animate={{ x: 0, opacity: 1 }}
                   exit={{ x: 6, opacity: 0 }}
                   transition={{ duration: 0.22 }}
-                  className="ml-1 rounded-full bg-primary/18 px-2 py-0.5 text-[11px] font-medium text-primary shadow-[0_0_14px_-8px_rgba(120,190,255,0.95)]"
+                  className="ml-1 rounded-full bg-primary/18 px-2 py-0.5 text-[11px] font-medium text-primary shadow-[0_0_14px_-8px_rgba(255,255,255,0.6)]"
                 >
                   Copied!
                 </motion.span>
@@ -191,7 +191,7 @@ export function About() {
             <motion.span
               aria-hidden
               className="pointer-events-none absolute inset-0 rounded-full"
-              whileHover={{ boxShadow: "0 0 0 6px rgba(120, 190, 255, 0.09)" }}
+              whileHover={{ boxShadow: "0 0 0 6px rgba(255, 255, 255, 0.06)" }}
               transition={{ duration: 0.25, ease: "easeOut" }}
             />
             <SocialButton
@@ -216,7 +216,7 @@ export function About() {
             <motion.span
               aria-hidden
               className="pointer-events-none absolute inset-0 rounded-full"
-              whileHover={{ boxShadow: "0 0 0 6px rgba(120, 190, 255, 0.09)" }}
+              whileHover={{ boxShadow: "0 0 0 6px rgba(255, 255, 255, 0.06)" }}
               transition={{ duration: 0.25, ease: "easeOut" }}
             />
             <SocialButton

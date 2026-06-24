@@ -66,7 +66,7 @@ export function ComponentsShowcase() {
       <div className="mx-auto max-w-6xl px-6">
         <Eyebrow className="mb-6">Capabilities</Eyebrow>
         <Display className="max-w-3xl">
-          Backend-first skills for <span className="text-gradient">full-stack products</span>.
+          Full-stack expertise for <span className="text-gradient">modern products</span>.
         </Display>
         <Lead className="mt-6">
           A quick map of the systems, tools, and application patterns I have worked with.

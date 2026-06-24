@@ -93,11 +93,11 @@ export function Contact() {
       <div className="mx-auto max-w-6xl px-6">
         <Eyebrow className="mb-6">Contact</Eyebrow>
         <Display className="max-w-3xl">
-          Need a backend or AI app{" "}
+          Need a full-stack or AI app{" "}
           <span className="text-gradient">built well</span>?
         </Display>
         <Lead className="mt-6">
-          Open to backend, full-stack, cloud, and AI application opportunities.
+          Open to full-stack, cloud, and AI application opportunities.
           Reach out for collaborations, internships, or project work.
         </Lead>
         <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_1.2fr]">

@@ -14,7 +14,7 @@ export const profile = {
   email: "wahid.shaikh4422@gmail.com",
   phone: "+91-8169120436",
   portrait,
-  bio: "Backend-focused full stack developer and IT undergraduate building scalable REST APIs, secure microservices, and AI-driven applications with the MERN stack, FastAPI, LangChain, RAG, LLMs, vector databases, Docker, and AWS.",
+  bio: "Passionate Full Stack Developer and IT undergraduate building high-performance web applications, scalable APIs, and AI-driven solutions with the MERN stack, Next.js, FastAPI, LangChain, RAG, and cloud infrastructure.",
   social: {
     github: "https://github.com/ShaikhWahid99",
     linkedin: "https://www.linkedin.com/in/wahidskh",
@@ -23,20 +23,11 @@ export const profile = {
 
 export const skills = [
   {
-    name: "Next.js",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-  },
-  {
-    name: "Java",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-  },
-  {
     name: "TypeScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  },
-  {
-    name: "Python",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },{
+    name: "Next.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   },
   {
     name: "Node.js",
@@ -45,12 +36,7 @@ export const skills = [
   {
     name: "Express.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-  },
-  {
-    name: "FastAPI",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
-  },
-  {
+  }, {
     name: "SQL",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   },
@@ -58,6 +44,20 @@ export const skills = [
     name: "MongoDB",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
   },
+  {
+    name: "Java",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  },
+  
+  {
+    name: "Python",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+  {
+    name: "FastAPI",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+  },
+ 
   {
     name: "PostgreSQL",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
@@ -139,7 +139,7 @@ export const projects = [
     title: "Social Media Platform",
     image: p5,
     description:
-      "MERN-based social media platform with JWT/bcrypt authentication, Dockerized backend, and scalable MongoDB architecture. Includes RESTful Express.js APIs for posts, likes, comments, and follow/unfollow features with full production deployment.",
+      "MERN-based social media platform with JWT/bcrypt authentication and scalable MongoDB architecture. Includes RESTful Express.js APIs for posts, likes, comments, and follow/unfollow features with full production deployment.",
     tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Docker", "JWT"],
     live: "https://linkup-jx24.onrender.com/",
     github: "https://github.com/ShaikhWahid99/Social-Media-Platform",
@@ -199,9 +199,9 @@ export const experience = [
   {
     company: "",
     role: "B.E. Information Technology - Mumbai University",
-    period: "Aug 2022 - Present",
+    period: "Aug 2022 - May 2026",
     description:
-      "Pursuing Bachelor of Engineering in Information Technology with a 7.94 CGPI while building production-style full-stack, backend, cloud, and AI projects.",
+      "Completed Bachelor of Engineering in Information Technology with a CGPI of 7.94, gaining hands-on experience in full-stack development, cloud technologies and AI-powered applications.",
   },
   {
     company: "",

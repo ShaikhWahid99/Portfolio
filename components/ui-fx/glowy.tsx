@@ -37,7 +37,7 @@ export function Glowy({
         className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         style={{
           background:
-            "radial-gradient(420px circle at var(--mx,50%) var(--my,50%), oklch(0.78 0.16 220 / 0.18), transparent 60%)",
+            "radial-gradient(420px circle at var(--mx,50%) var(--my,50%), oklch(1 0 0 / 0.12), transparent 60%)",
         }}
       />
       {/* Border shimmer */}
@@ -45,7 +45,7 @@ export function Glowy({
         className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         style={{
           background:
-            "radial-gradient(280px circle at var(--mx,50%) var(--my,50%), oklch(0.78 0.16 220 / 0.5), transparent 70%)",
+            "radial-gradient(280px circle at var(--mx,50%) var(--my,50%), oklch(1 0 0 / 0.3), transparent 70%)",
           WebkitMask:
             "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
           WebkitMaskComposite: "xor",
